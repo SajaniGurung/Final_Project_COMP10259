@@ -1,0 +1,165 @@
+<!-- Your main page should go here -->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Write your species name under the title -->
+	<title>
+		Studying Nemo: The Common Clownfish
+	</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	
+<!-- Header Start -->
+<header class="header">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="fish-name">
+                <!-- Write your species name under the anchor tag -->
+				<a href="index.html">Common Clownfish</a>
+			</div>
+	 <div class="nav-toggle">
+	   <span></span>
+	 </div>
+			<nav class="nav">
+				<ul>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#predators">Prey & Predators</a></li>
+					<li><a href="#gallery">Gallery</a></li>
+					<li><a href="#count">World Count</a></li>
+          <li><a href="honesty.html">Honesty Declaration</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- Header End -->
+<section>
+	<p class="p2"><b>Did you know </b>that clownfish are not just adorable, <br>
+		but they also boast some remarkable characteristics that make them<br> stand out 
+		in the vibrant tapestry of the ocean?</p><br>
+<div class="img">                                                                              
+<img style="width: 60%; height: 500px;" src="img/NEMO3.jpg" alt="A beautiful clownfish">
+<br><figcaption>Fig.1 - A beautiful life in marine.</figcaption> <!--giving caption/name to the figure-->
+</div><br><br>
+
+</section>
+<!-- Home Section Start -->
+<section class="home-section" id="home">
+	<div class="introdiv"><h2 class="int">Introduction</h2><br>
+		<p class="p3">Embark on an extraordinary journey into the heart of the ocean, where vibrant colors, captivating tales, 
+		 and the enchanting world of clownfish come together in perfect harmony. "Waves of Joy" is your portal to explore the real-life 
+		 wonders of these charismatic creatures and their animated counterparts from Pixar's "Finding Nemo." Beyond the whimsical facade
+		 of animated characters lies a symphony of facts, stories, and connections waiting to be uncovered. Join us as we dive into the 
+			depths of the coral kingdom, unravel the hidden language of clownfish, and discover the ripple effect of Nemo's impact on marine 
+			conservation. This isn't just a website; it's a celebration—a celebration of the underwater wonders that inspire joy and curiosity. 
+			Immerse yourself in the symphony of clownfish stories, where the oceanic melody invites you to explore, learn, and revel in the waves 
+			of joy that these remarkable creatures bring to our world.</p><br>
+		 </div>
+</section>
+<!-- Home Section End -->
+
+<!-- About Section Start -->
+<section class="about-section" id="about">
+	<div ><h2 class="int">Facts: Discovering the Hidden Harmony</h2><br>
+		<p class="p3"><b>Here are some fascinating facts that will make you appreciate these underwater wonders even more:</b><br></p><br>
+		<ol class="p3" style="width: 55%;">
+				<li>Colorful Personalities: Clownfish are known for their vibrant colors, which serve a dual purpose. Beyond the aesthetic appeal, 
+						the colors also act as a form of protection, allowing them to blend into the vivid coral reefs that they call home.</li>
+				<li>Family Matters: These charming creatures exhibit a unique family structure. In a group of clownfish, there is a dominant female, 
+						and if she dies, the most dominant male transforms into a female. This ensures the survival and harmony of the group.</li>
+				<li>Nemo's Real World Counterpart: You might be surprised to learn that our beloved animated character, Nemo, is based on a real 
+						species of clownfish known as the ocellaris clownfish. The endearing characteristics of Nemo echo the playful nature and 
+						tenacity of these real-life underwater companions.</li>    
+				<li>Symbiotic Dance: Clownfish share a unique relationship with sea anemones. Contrary to popular belief, they aren't harmed by 
+						the stinging tentacles. Instead, they form a symbiotic partnership, providing the anemones protection, while the anemones 
+						offer a safe haven for the clownfish.</li> 
+				<li>Communication Underwater: Just like in an orchestral symphony, communication is key. Clownfish use a series of pops and 
+						chirps to communicate with each other, often signaling danger or courtship. Delve into the underwater language that adds 
+						a fascinating layer to their social interactions.</li>       
+		</ol><br><br>
+		 </div>
+</section>
+<!-- About Section End -->
+
+<!-- Prey & Predators Section Start -->
+<section class="predators-section" id="predators">
+	
+	<h2 class="int">Prey and Predators</h2><br>
+	<p class="p3">
+	Clownfish are omnivores, feeding on a varied diet consisting of algae, zooplankton, worms and small crustaceans. 
+<br>
+	Larger fish such as lionfish, snapper, grouper, triggers and eels will prey on clownfish.
+</p>
+</section>
+<!-- Prey & Predators Section End -->
+<h2 class="int">Gallery</h2>
+<!-- Gallery Section Start -->
+<section class="gallery-section" id="gallery">
+	<div>
+							<div class="column" onclick='openModal(1)'>
+								<img src="img/nemo4.jpg" alt="clownfish">
+							</div>
+							<div class="column" onclick='openModal(2)'>
+									<img src="img/nemo5.webp" alt="clownfish">
+							</div>
+							<div class="column" onclick='openModal(3)'>
+									<img src="img/nemo6.jpg" alt="clownfish">
+							</div>
+							<div class="column" onclick='openModal(4)'>
+									<img src="img/nemo7.png" alt="clownfish">
+							</div>
+	</div>
+</section>
+
+<div id="modaldivision" onclick="closeModal()">
+	<img id="modal" onclick="null">
+</div>
+ <section class="count-section" id="count">
+	<br><br><h2 class="int">World Count</h2><br>
+	<div class="tabledivision">
+	<table>
+			<tr>
+					<td class="light" style="border-bottom: 0px;"></td>
+					<td colspan="2" class="data tablehead">Amphiprion ocellaris</td>
+			</tr>
+			<tr>
+					<td class="light" style="border-top: 0px;"></td>
+					<td class="data tablehead">De Novo Assembly</td>
+					<td class="data tablehead">Reference-Guided Assembly</td>
+			</tr>
+			<tr>
+					<td class="tablehead">Total assembly size (Mb)</td>
+					<td class="data light">744</td>
+					<td class="data light">798</td>
+			</tr>
+			<tr>
+					<td class="tablehead">Number of scaffolds</td>
+					<td class="data light">27,951</td>
+					<td class="data light">16,543</td>
+			</tr>
+			<tr>
+					<td class="tablehead">Number of genes</td>
+					<td class="data light">24,383</td>
+					<td class="data light">29,913</td>
+			</tr>
+	</table>
+	<div>
+</section>
+
+<p class="copyright">&copy; 2022 SajaniParmjeetNischal Org.</p>
+
+<img class="display pic1" src="img/nemo4.jpg" alt="Picture1">
+<img class="display pic2" src="img/nemo5.jpg" alt="Picture2">
+<img class="display pic3" src="img/nemo6.jpg" alt="Picture3">
+<img class="display pic4" src="img/nemo7.jpg" alt="Picture4">
+
+<script src="css/jquery-3.7.1.js"></script>
+<script src="css/index.js"></script>
+
+</body>
+</html>

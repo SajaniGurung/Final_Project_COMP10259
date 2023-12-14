@@ -1,0 +1,327 @@
+/* Designing overall page*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+/*Setting Up CSS Box Model*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*Setting Up Body*/
+body {
+  margin: 0;
+  line-height: 1.5;
+  background-color: #b6b4b3;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+/*Designing Container Classes*/
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+/* Designing Header */
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.5s ease;
+  background-color: #000000;
+}
+
+.header .fish-name {
+  padding: 0 15px;
+}
+
+.header .fish-name a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+.header.fixed .fish-name a {
+  color: #000000;
+}
+
+.header .nav-toggle {
+  width: 40px;
+  height: 34px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+  display: none;
+}
+
+.header.fixed .nav-toggle {
+  border-color: #000000;
+}
+
+.header .nav-toggle span {
+  height: 1px;
+  display: block;
+  width: 16px;
+  background-color: #ffffff;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.header .nav-toggle span:before,
+.header .nav-toggle span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.header.fixed .nav-toggle span,
+.header.fixed .nav-toggle span:before,
+.header.fixed .nav-toggle span:after {
+  background-color: #000000;
+}
+
+.header .nav-toggle span:before {
+  transform: translateY(-6px);
+}
+
+.header .nav-toggle span:after {
+  transform: translateY(6px);
+}
+
+.header .nav {
+  padding: 0 15px;
+}
+
+.header .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.header .nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: yellow;
+  padding: 25px 0;
+  display: block;
+  transition: all 0.5s ease;
+}
+.header .nav ul li a:hover {
+  color: white;
+}
+
+.header.fixed .nav ul li a {
+  color: #000000;
+}
+
+.header.fixed .nav ul li a:hover {
+  color: #FF9800;
+}
+
+/* Designing Home section */
+.home-section {
+  min-height: 100vh;
+  background-image: url("../img/aqua.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 15px;
+}
+
+/* Designing About section */
+.about-section {
+  padding: 80px 0 0;
+}
+
+/* Designing Prey & Predators Section */
+.predators-section {
+  padding: 80px 0 0;
+}
+
+/* Designing Food Section */
+.gallery-section {
+  padding: 80px 0 0;
+}
+
+/* Designing World Count Section */
+.count-section {
+  padding: 80px 0 0;
+}
+
+.honesty {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.honesty ul {
+  list-style: none;
+}
+
+.honesty ol {
+  list-style: none;
+}
+
+.honesty a {
+  color: teal;
+}
+
+/*Starting of older CSS*/
+.int {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(231, 112, 20);
+  padding-top: 5%;
+}
+
+.p3 {
+  margin-left: 20%;
+  text-align: justify;
+  font-size: 20px;
+  font-family: cursive;
+  color: white;
+  width: 60%;
+}
+
+.p3:hover {
+  color: chocolate;
+  font-style: italic;
+}
+
+.img {
+  position: relative;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+
+.p2 {
+  text-align: center;
+  font-size: 25px;
+  font-family: cursive;
+  color: #DD6111;
+  padding-top: 180px;
+}
+
+.tabledivison {
+  display: block;
+  margin: auto;
+}
+
+table {
+  border: 1px solid rgb(177, 115, 0);
+  border-collapse: collapse;
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+td {
+  border: 1px solid rgb(177, 115, 0);
+  padding: 10px;
+  width: 40%;
+  font-size: larger;
+}
+
+.data {
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+}
+
+.tablehead {
+  background-color: rgb(255, 165, 105);
+}
+
+.light {
+  background-color: rgb(243, 204, 178);
+}
+
+.display {
+  width: 80%;
+  height: 80%;
+  display: none;
+  margin: auto;
+}
+
+.column {
+  display: block;
+  margin: auto;
+}
+
+.column img {
+  height: 50%;
+  width: 23%;
+}
+
+#modaldivision {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#modal {
+  padding-top: 5%;
+  height: 90%;
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+.gallery-section {
+  padding-left: 5%;
+}
+
+.gallery-section div {
+  display: inline;
+  margin: auto;
+}
+
+.copyright {
+  margin-top: 100px;
+  float: right;
+  margin-right: 10px;
+}/*# sourceMappingURL=style.css.map */

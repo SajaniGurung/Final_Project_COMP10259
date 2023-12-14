@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+      body{
+        margin-top: 60px;
+        background: url(img/aqua.jpg);
+      }
+      fieldset{
+        width: 35%;
+        padding: 20px ;
+        position: relative;
+        margin: auto;
+        background-color: rgb(245, 223, 208);
+        border: 3px dashed red;
+      }
+      fieldset label, fieldset input{
+        height: 40px; 
+      }
+      h1{
+        font-size: 40px;
+        color: rgb(247, 110, 18);
+      }
+      fieldset input{
+        width: 300px;
+      }
+      fieldset label{
+        font-size: 25px;
+      }
+      .button{
+        margin-left: 25%;
+        background-color: rgb(207, 151, 114);
+      }
+      .button:hover{
+        background-color: rgb(247, 110, 18);
+      }
+      td:first-child{
+        width: 200px;
+      }       
+      h1{
+        animation-name: example;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+      }        
+      @keyframes example {
+        0%   {color: crimson;}
+        50%  {color:darkgreen;}
+        100% {color:crimson;}
+      }
+    </style>
+    
+  </head>
+  <body>
+    
+    <form name="contactForm" id="form1" action="https://formspree.io/f/mrgwneyb" method="post">
+      <fieldset>
+        <table>
+          <tr>
+            <h1 style="text-align: center;">Contact Us</h1>
+          </tr>
+          <tr>
+            <td>
+              <label>First Name<a style="color: red;">*</a> : </label>
+            </td>
+            <td>
+              <input type="text" name="First Name" id="fn" required placeholder="Enter your first name"><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Last Name<a style="color: red;">*</a> : </label>
+            </td>
+            <td>
+              <input type="text" name="Last Name" id="ln" required placeholder="Enter your last name"><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>E-mail<a style="color: red;">*</a> : </label>
+            </td>
+            <td>
+              <input type="email" name="Email" id="em" required placeholder="Enter your email"><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td>   
+              <label>Date<a style="color: red;">*</a> : </label>
+            </td> 
+            <td>
+              <input type="text" name="Date" id="dt" required placeholder="DD/MM/YY"><br><br>
+            </td>
+          </tr>
+          <tr>
+            <td>   
+              <label>Phone<a style="color: red;">*</a> : </label>
+            </td>
+            <td>
+              <input type="tel" name="Phone" id="ph" required placeholder="XXXXXXXXXX"><br><br>
+            </td> 
+          </tr>
+          <tr>
+            <td>   
+              <label>Message<a style="color: red;">*</a> : </label>
+            </td> 
+            <td>
+              <input type="text" name="Message" id="msg" required><br><br>
+            </td>
+          </tr>      
+        </table>
+        <input class= "button" type="button" onclick="validateForm()" value="Submit"><br><br>
+      </fieldset>
+    </form>
+
+    <script>
+        
+      function validateForm(){
+        let fname = document.forms["contactForm"]["fn"].value
+        let lname = document.forms["contactForm"]["ln"].value
+        let email = document.forms["contactForm"]["em"].value
+        let date = document.forms["contactForm"]["dt"].value
+        let phone = document.forms["contactForm"]["ph"].value
+        let message = document.forms["contactForm"]["msg"].value
+
+        if (fname.length < 5 || lname.length < 5){
+          alert("Name must have atleast 5 characters each")
+          return false
+        }
+
+        else if (phone.length != 10){
+          alert("Phone number should be 10 digits")
+          return false
+        }
+        
+        else if(message.length < 50){
+          alert("Message must contain atleast 50 alphabets")
+          return false
+        }
+
+        else if (date.length != 8 || date.substr(2,1) != "/" || date.substr(5,1) != "/" ){
+          alert("Date format incorrect")
+          return false
+        }
+
+        else if (parseInt(date.substr(0,2)) < 1|| parseInt(date.substr(0,2))>31|| parseInt(date.substr(3,2))<1|| parseInt(date.substr(3,2))>12|| parseInt(date.substr(6,2))<23 ){
+          alert("Incorrect date")
+          return false
+        }
+
+        sendEmail()
+        document.getElementById("form1").submit()
+      }
+
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        let fname = document.forms["contactForm"]["fn"].value
+        let lname = document.forms["contactForm"]["ln"].value
+        let email = document.forms["contactForm"]["em"].value
+        let date = document.forms["contactForm"]["dt"].value
+        let phone = document.forms["contactForm"]["ph"].value
+        let message = document.forms["contactForm"]["msg"].value
+
+        Email.send({
+          Host : "smtp.elasticemail.com",
+          Username : "atreyanischal@gmail.com",
+          Password : "7804591DFE9EEC14CE285B5CC9CDBC451FB5",
+          To : document.getElementById("em").value,
+          From : 'atreyanischal@gmail.com',
+          Subject : "Form submitted",
+          Body : "Name : "+ fname + " " + lname + 
+                  "<br>Email :" + email +
+                  "<br>Date : " + date + 
+                  "<br>Message : "+ message
+        }).then(
+          message => alert(message)
+        );
+      }
+    </script>
+
+  </body>
+</html>
